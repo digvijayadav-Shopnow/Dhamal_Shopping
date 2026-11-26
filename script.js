@@ -1,5 +1,5 @@
 // IMPORTANT: Replace this with your WhatsApp number, including country code, without + or spaces.
-const WHATSAPP_NUMBER = "91XXXXXXXXXX";
+const WHATSAPP_NUMBER = "918308652628";
 
 const products = [
   {id:1,name:"Everyday Tote Bag",category:"Fashion",price:499,icon:"👜"},
