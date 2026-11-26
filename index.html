@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop everyday essentials, fashion, accessories and more at Ni & Di.">
+  <title>Ni & Di | Online Shopping</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">Ni <span>&</span> Di</a>
+    <nav><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <button class="cart-button" onclick="toggleCart()">Cart <span id="cart-count">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">WELCOME TO NI & DI</p>
+        <h1>Find your everyday<br><em>favourites.</em></h1>
+        <p>Fashion, accessories, home essentials and more — all in one place.</p>
+        <a class="primary" href="#shop">Explore products</a>
+      </div>
+      <div class="hero-art"><span>GOOD FINDS<br>GOOD DAYS</span></div>
+    </section>
+
+    <section class="section" id="shop">
+      <div class="section-heading"><div><p class="eyebrow">OUR COLLECTION</p><h2>Shop popular picks</h2></div>
+        <select id="category-filter" onchange="renderProducts()">
+          <option value="All">All categories</option><option>Fashion</option><option>Accessories</option><option>Home</option><option>Electronics</option>
+        </select>
+      </div>
+      <div class="products" id="products"></div>
+    </section>
+
+    <section class="about" id="about"><p class="eyebrow">A LITTLE ABOUT US</p><h2>Simple shopping.<br>Good choices.</h2><p>Ni & Di is your growing online store for useful, everyday products. Browse our demo collection and message us to place an order.</p></section>
+  </main>
+
+  <footer id="contact"><div class="brand">Ni <span>&</span> Di</div><p>Questions or orders? Contact us on WhatsApp.</p><a id="whatsapp-link" href="#" target="_blank" rel="noopener">Chat on WhatsApp</a><small>© 2026 Ni & Di. All rights reserved.</small></footer>
+
+  <aside class="cart-panel" id="cart-panel" aria-label="Shopping cart">
+    <div class="cart-head"><h2>Your cart</h2><button onclick="toggleCart()" aria-label="Close cart">✕</button></div>
+    <div id="cart-items"></div>
+    <div class="cart-bottom"><strong id="cart-total">Total: ₹0</strong><button class="primary" onclick="checkout()">Order on WhatsApp</button></div>
+  </aside>
+  <div class="overlay" id="overlay" onclick="toggleCart()"></div>
+  <script src="script.js"></script>
+</body>
+</html>
